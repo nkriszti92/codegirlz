@@ -16,7 +16,7 @@ class Deck{
     static ArrayList<String> figures = new ArrayList<>(Arrays.asList("Ace","King", "Queen", "Jack","2","3","4","5","6","7","8","9","10"));
     static ArrayList<Card> deckList = new ArrayList<>();
 
-    public Deck(int hanyKartyatAkarunkMegtartani){
+    public Deck(int numberOfCards){
         for (int i = 0; i < colors.size(); i++) {
             for (int j = 0; j < figures.size(); j++) {
                 Card actualCard = new Card(colors.get(i),figures.get(j));
@@ -26,7 +26,7 @@ class Deck{
 
         Collections.shuffle(deckList);
 
-        for (int i = 0; i < 52-hanyKartyatAkarunkMegtartani; i++) {
+        for (int i = 0; i < 52-numberOfCards; i++) {
             deckList.remove(0);
         }
     }
